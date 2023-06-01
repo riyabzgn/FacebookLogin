@@ -1,0 +1,87 @@
+.card {
+  font-size: 20px;
+  margin: 100px;
+  background-color: rgb(190, 201, 234);
+  padding: 30px;
+  width: 600px;
+  height: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  margin-left: 400px;
+}
+
+label{
+    
+    font-size:18px;
+}
+
+form {
+  height: 100%;
+}
+
+p{
+    margin:0px;
+    font-size: 15px;
+}
+
+.cardHead {
+  text-align: center;
+}
+
+.cardItem {
+  height: 50px;
+  margin: 10px;
+}
+
+.radioBtn {
+  /* height: 10px; */
+  margin: 8px;
+    padding: 8px;
+
+    input[type="radio"]{
+        font-size: 5px;
+    }
+}
+
+input{
+  font-size: 18px;
+  width: 100%;
+  height:30px;
+
+}
+
+input[type="radio"]{
+    height: 20px;
+}  
+
+input[type="checkbox"]{
+    display:inline-block;
+    height: 20px;
+}
+
+select{
+    font-size: 18px;
+    width: 100%;
+    height:30px;
+}
+
+.submitBtn {
+  margin: 8px;
+  text-align: center;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+input[type="submit"]{
+    background-color: rgba(141, 137, 193, 0.868);
+    border: none;
+}
+
+input[type="submit"]:hover{
+    background-color: rgba(94, 87, 197, 0.868);
+}
+
+#error1{
+    display: none;
+}

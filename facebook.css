@@ -1,0 +1,108 @@
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card{
+    margin-left:780px;
+    padding:10px;
+    /* border: 2px;
+    border-color: grey; */
+    margin-top: 200px;
+    width:380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.textField{
+    margin-bottom:20px;
+}
+
+.text{
+    margin-left:830px;
+    padding:10px;
+    margin-top: 20px;
+    font-size:14px;
+}
+
+input{
+    border: 0.5px solid gray;
+    width: 350px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px;
+
+}
+
+.hr1{
+    align-items: center;
+    border-top: 1px solid lightgray;
+    width: 350px;
+}
+
+.btn1{
+    background-color: rgb(24, 119, 242);
+    color:white;
+    width: 350px;
+    height:50px;
+    border: none;
+    border-radius:5px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.btn1:hover{
+    background-color: rgb(18, 90, 185);
+}
+
+.btn2{
+    background-color: rgb(59,164,29);
+    color:white;
+    text-decoration: bold;
+    width: 200px;
+    height:40px;
+    border: none;
+    border-radius:5px;
+    margin:10px;
+    margin-top:20px;
+    margin-right: 10px;
+    text-align:center;
+    font-size: 16px;
+    font-weight:lighter;
+
+}
+
+.btn2:hover{
+    background-color: rgb(37, 115, 15);
+}
+
+a{
+    margin:50px;
+    text-decoration: none;
+    color:rgb(24, 119, 242);
+    text-align: center;
+
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#error1{
+    display: none;
+    color: red;
+}
+
+#nextPage{
+    display: none;
+}
+
+#error2{
+    display:none;
+    color: red;
+}
