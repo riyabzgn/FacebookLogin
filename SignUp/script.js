@@ -1,20 +1,23 @@
 function validateForm() {
-    var fname = document.getElementById("name");
+    //var fname = document.getElementById("name");
     var uname = document.getElementById("uName");
-    // var pwd = document.getElementById("pass");
+    var pwd = document.getElementById("pass");
 
-    console.log("Full Name:", fname.value);
     console.log("Username:", uname.value);
+    console.log("Password:", pwd.value);
 
-    if (fname.value == '') {
-        document.getElementById("error1").style.display = "block";
+    if(uname.value == "" && pwd.value==""){
+        document.getElementById("error2").style.display = "block";
+        document.getElementById("error3").style.display = "block";
     }
-    if (uname.value == '') {
+
+    if (uname.value == "") {
         document.getElementById("error2").style.display = "block";
     }
     if (pwd.value == "") {
         document.getElementById("error3").style.display = "block";
     }
+}
 
     //   if (fname.value == "" && uname.value == "" && pwd.value == "") {
     //     document.getElementById("error1").innerHTML = "**Name Required**";
@@ -64,4 +67,3 @@ function validateForm() {
     //     // console.log(pwd.value);
     //     return true;
     //   }
-}

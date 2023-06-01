@@ -17,76 +17,71 @@
             <div class="cardItem">
                 <label><b>Full Name:</b></label>
                 <input type="text" id="name" name="name" placeholder="Enter name here">
-                <div>
-                    <p id="error1"> field required</p>
-                </div>
             </div>
             <br>
             <div class="cardItem">
-                <label><b>Username:</b></label>
+                <label><b>Username*:</b></label>
                 <input type="text" id="uName" placeholder="Enter Username here">
                 <div>
-                    <!-- <p id="error2"> field required</p> -->
+                    <p id="error2"> Username required</p>
                 </div>
 
             </div>
             <br>
             <div class="cardItem">
-                <label><b>Password:</b></label>
+                <label><b>Password*:</b></label>
                 <input type="password" id="pass" placeholder="Enter password here">
                 <div>
-                    <!-- <p id="error3"> field required</p> -->
+                    <p id="error3"> Password required</p>
                 </div>
                 <br>
             </div>
             <br>
-            <!-- <div class="cardItem">
-                    <label for="dob"><b>Date of Birth:</b></label>
-                    <input type="date">
+            <div class="cardItem">
+                <label for="dob"><b>Date of Birth:</b></label>
+                <input type="date">
+            </div>
+            <br>
+            <div class="cardItem">
+                <label for="age"><b>Choose age range:</b></label>
+                <select name="age" id="Age">
+                    <option value="18+">18-25</option>
+                    <option value="25+">25-30</option>
+                    <option value="30+">30-40</option>
+                    <option value="40+">40-60</option>
+                    <option value="60+">60+</option>
+                </select>
+            </div>
+            <br>
 
-                </div>
+            <div class="DOI">
+                <label for="doi"><b>Domain of Interest:</b></label>
 
-                <div class="cardItem">
-                    <label for="age"><b>Choose age range:</b></label>
-                    <select name="age" id="Age">
-                        <option value="18+">18-25</option>
-                        <option value="25+">25-30</option>
-                        <option value="30+">30-40</option>
-                        <option value="40+">40-60</option>
-                        <option value="60+">60+</option>
-                    </select>
-                </div>
-                <br>
+                <input type="checkbox" id="DoI1" name="DoI1" value="FED">
+                <label for="DoI1"> Front End Development</label><br>
 
-                <div class="DOI">
-                    <label for="doi"><b>Domain of Interest:</b></label>
-                
-                    <input type="checkbox" id="DoI1" name="DoI1" value="FED">
-                    <label for="DoI1"> Front End Development</label><br>
+                <input type="checkbox" id="DoI2" name="DoI2" value="BED">
+                <label for="DoI2"> Back End Development</label><br>
 
-                    <input type="checkbox" id="DoI2" name="DoI2" value="BED">
-                    <label for="DoI2"> Back End Development</label><br>
-
-                    <input type="checkbox" id="DoI3" name="DoI3" value="DA">
-                    <label for="DoI3"> Database Administrator</label>
-                </div> -->
+                <input type="checkbox" id="DoI3" name="DoI3" value="DA">
+                <label for="DoI3"> Database Administrator</label>
+            </div>
+            <br>
 
             <!-- <div class="radioBtn">
-                    <label for="gender">Choose Gender:</label>
-                    <input type="radio" name="gender">
-                    <label for="male">Male</label>
+                <label for="gender">Choose Gender:</label>
+                <input type="radio" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" name="gender">
+                <label for="female">Female</label>
 
-                    <input type="radio" name="gender">
-                    <label for="female">Female</label>
-                    
-                    <br>
-                </div> -->
+            </div> -->
 
-            <div class="submitBtn">
-                <button onclick="validateForm()">submit</button>
+            <div>
+                <button  id="submitBtn" onclick="validateForm()">submit</button>
             </div>
-            <!-- 
-            </form> -->
+
+            </form>
         </div>
     </div>
 </body>
