@@ -37,10 +37,6 @@ p{
   /* height: 10px; */
   margin: 8px;
     padding: 8px;
-
-    input[type="radio"]{
-        font-size: 5px;
-    }
 }
 
 input{
