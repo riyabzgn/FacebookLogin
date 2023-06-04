@@ -15,8 +15,11 @@
         <div>
             <!-- <form> -->
             <div class="cardItem">
-                <label><b>Full Name:</b></label>
-                <input type="text" id="name" name="name" placeholder="Enter name here">
+                <label><b>Full Name*:</b></label>
+                <input type="text" id="fname" placeholder="Enter name here">
+                <div>
+                    <p id="error1">Full Name required</p>
+                </div>
             </div>
             <br>
             <div class="cardItem">
@@ -32,18 +35,23 @@
                 <label><b>Password*:</b></label>
                 <input type="password" id="pass" placeholder="Enter password here">
                 <div>
-                    <p id="error3"> Password required</p>
+                    <p id="error3">Password required</p>
                 </div>
                 <br>
             </div>
             <br>
+
             <div class="cardItem">
-                <label for="dob"><b>Date of Birth:</b></label>
-                <input type="date">
+                <label><b>Date of Birth*:</b></label>
+                <input type="date" id="dob">
+                <div>
+                    <p id="error4">DoB Required</p>
+                </div>
             </div>
             <br>
             <div class="cardItem">
                 <label for="age"><b>Choose age range:</b></label>
+
                 <select name="age" id="Age">
                     <option value="18+">18-25</option>
                     <option value="25+">25-30</option>
@@ -55,30 +63,44 @@
             <br>
 
             <div class="DOI">
-                <label for="doi"><b>Domain of Interest:</b></label>
+                <div class="domain">
+                    <label for="doi"><b>Domain of Interest:</b></label>
+                    <br>
+                    <p id="error6"></p>
+                </div>
 
-                <input type="checkbox" id="DoI1" name="DoI1" value="FED">
-                <label for="DoI1"> Front End Development</label><br>
+                <div class="domain">
+                    <label for="DoI1"> Front End Development</label>
+                    <input type="checkbox" class="checkbox"> 
+                </div>
 
-                <input type="checkbox" id="DoI2" name="DoI2" value="BED">
-                <label for="DoI2"> Back End Development</label><br>
+                <div class="domain">
+                    <label for="DoI2"> Back End Development</label><br>
+                    <input type="checkbox" class="checkbox">
+                </div>
 
-                <input type="checkbox" id="DoI3" name="DoI3" value="DA">
-                <label for="DoI3"> Database Administrator</label>
-            </div>
+                <div class="domain"> 
+                    <label for="DoI3"> Database Administrator</label>
+                    <input type="checkbox" class="checkbox">
+                </div>
+
+            </div>x
             <br>
 
-            <!-- <div class="radioBtn">
-                <label for="gender">Choose Gender:</label>
+            <div class="radioBtn">
+                <label>Gender*:</label>
+                <div>
+                    <p id="error5">Gender Required</p>
+                </div>
                 <input type="radio" name="gender">
                 <label for="male">Male</label>
                 <input type="radio" name="gender">
                 <label for="female">Female</label>
 
-            </div> -->
+            </div>
 
-            <div>
-                <button  id="submitBtn" onclick="validateForm()">submit</button>
+            <div id="btnSpace">
+                <button id="submitBtn" onclick="validateForm()">Submit</button>
             </div>
 
             </form>
