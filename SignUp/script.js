@@ -4,15 +4,16 @@ function validateForm() {
     var pwd = document.getElementById("pass");
     var bday = document.getElementById("dob");
     var Gender;
-    var check = document.getElementsByClassName("checkbox");
-    var box;
+    var check = document.querySelectorAll('input[name="interest"]:checked');
+    var notchecked;
 
-    if (check.checked) {
-        var box = "true";
+    if (check.length === 0) {
+        notchecked= "true";
     }
-    if (!check.checked) {
-        var box = "false";
+    if (check.length>0){
+        notchecked= "false";
     }
+
 
     var radioButtons = document.querySelectorAll('input[name="gender"]');
     var radioButtonChecked = false;
@@ -36,7 +37,7 @@ function validateForm() {
     // console.log("Gender: ", Gender.value);
     //'input[name="gender"]:checked'
 
-    if (fname.value == "" && uname.value == "" && pwd.value == "" && bday.value == "" && Gender == "false" && box == "false") {
+    if (fname.value == "" && uname.value == "" && pwd.value == "" && bday.value == "" && Gender == "false" && notchecked == "true") {
         document.getElementById("error1").style.display = "block";
         document.getElementById("error2").style.display = "block";
         document.getElementById("error3").style.display = "block";
@@ -59,7 +60,7 @@ function validateForm() {
     if (Gender == "false") {
         document.getElementById("error5").style.display = "block";
     }
-    if (box == "false") {
+    if (notchecked == "true") {
         document.getElementById("error6").style.display = "block";
     }
 }
