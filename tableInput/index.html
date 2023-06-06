@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <link rel="stylesheet" href="../tableInput/style.css">
+    <script src="../tableInput/script.js"></script>
+</head>
+
+<body>
+    <div class="tb">
+        <h3 id="heading1">User Information:</h3>
+        <table id="output">
+            <thead>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Phone No</td>
+                <td>DoB</td>
+                <td>Age</td>
+                <td>Gender</td>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+
+    <div class="ip">
+        <form action="">
+            <h4 id="heading2">Enter User details here:</h4>
+            <div class="input1">
+
+                <div class="fname">
+                    <label>Name </label>
+                    <input type="text" id="fname">
+                </div>
+                <div class="address">
+                    <label>Address </label>
+                    <input type="text" id="address">
+                </div>
+                <div class="phoneNo">
+                    <label>Phone No. </label>
+                    <input type="text" id="phoneNo"></input>
+                </div>
+            </div>
+            <div class="input2">
+
+
+
+                <div class="dob">
+                    <label>Date Of Birth </label>
+                    <input type="date" id="dob"></input>
+                </div>
+                <div class="age">
+                    <label>Age </label>
+                    <input type="text" id="age"></input>
+                </div>
+                <div class="gender">
+                    <label>Gender </label>
+                    <input type="text" id="gender"></input>
+                </div>
+
+            </div>
+        </form>
+        <div class="btn">
+            <button class="button" onclick="addRow();">Add Row</button>
+        </div>
+        <br>
+    </div>
+
+</body>
+
+</html>
