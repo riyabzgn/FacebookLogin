@@ -31,17 +31,21 @@
     <script>
         const tbody = document.getElementById("tbody");
 
+        //array values for the table
         const users = [
-            { name: "Riya", address: "Bhaktapur", phoneNo: 98236007, dob: "27/03/2002", age: 21, gender: "Female" },
-            { name: "Pritha", address: "Baneshwor", phoneNo: 98239967, dob: "01/01/2000", age: 22, gender: "Female" },
-            { name: "Sanil", address: "Bhaktapur", phoneNo: 98002367, dob: "04/07/2002", age: 21, gender: "Male" }
+            { name: "Riya Bazgain", address: "Bhaktapur", phoneNo: 98233765784, dob: "27/03/2002", age: 21, gender: "Female" },
+            { name: "Pritha Shrestha", address: "Baneshwor", phoneNo: 9803684576, dob: "01/01/2000", age: 22, gender: "Female" },
+            { name: "Sanil Manandhar", address: "Kirtipur", phoneNo: 9808723444, dob: "04/07/2001", age: 21, gender: "Male" },
+            { name: "Khushi Lamichanney ", address: "Gangtok", phoneNo: 980895678, dob: "02/07/2002", age: 21, gender: "Male"}
         ];
 
+        //this functions adds data in the table through JS
         function addRow() {
             tbody.innerHTML = ""; // Clear the table body
-
+            //optimized way of adding rows
             users.forEach((data) => {
                 const row = document.createElement('tr');
+                //it adds data to the specified columns
                 row.innerHTML = `
                     <td>${data.name}</td>
                     <td>${data.address}</td>
@@ -53,18 +57,25 @@
                 tbody.appendChild(row);
             });
         }
-
+        
+        //This table helps filter the name list and search for the specified name
         function filterTable() {
             const searchName = document.querySelector(".searchName");
             const keyword = searchName.value.toUpperCase();
             const rows = tbody.getElementsByTagName("tr");
 
+            //iterates through the list of names
             for (const row of rows) {
                 const nameCol = row.getElementsByTagName("td")[0];
                 if (nameCol) {
+                    // .textContent returns text content of an element
+                    //innerText also represents textual content 
+                    //BUTTT we use both using OR just in case the truth value isnt found using one.
                     const nameValue = nameCol.textContent || nameCol.innerText;
                     const nameMatch = nameValue.toUpperCase().includes(keyword);
+                    //If shortcut used to check if the typed name matches with the existing list of names
                     row.style.display = nameMatch ? "" : "none";
+                
                 }
             }
         }
