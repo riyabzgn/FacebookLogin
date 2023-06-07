@@ -11,7 +11,7 @@
 .head1{
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: white;
 }
 
@@ -39,9 +39,76 @@ td{
     border-color: inherit;
 }
 
+
+
+.formHead{
+    padding:10px;
+    width: 890px;
+    margin-left:280px;
+    margin-top:50px;
+    background-color: #201E20;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #E0A96D;
+    color: #DDC3A5;
+    text-align: center;
+
+}
+
+.ip{
+    padding:50px;
+    width: 800px;
+    margin-left:280px;
+    margin-top:50px;
+    background-color:#DDC3A5;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #E0A96D;
+}
+
 .searchName{
-    /* margin-left:150px; */
-    margin-bottom:20px;
     width:100%;
+    margin-bottom: 20px;
     height: 30px;
 }
+
+
+.formItem{
+    height: 30px;
+    margin:20px;
+    width:200px;
+
+}
+
+input[type="date"]{
+    height: 30px;
+    margin:20px;
+    width:200px;
+}
+
+.class{
+    margin: 30px;
+}
+
+.input1{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.input2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+
+}
+.button{
+    color: #DDC3A5;
+    background-color: #201E20;
+    border: none;
+    width:400px;
+    height:40px;
+}
+
