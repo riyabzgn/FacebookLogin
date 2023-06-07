@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../tableU/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h2 class="head1">User Details</h2>
+        <div>
+            <input type="text" class="searchName" onkeyup="filterTable()" placeholder="Search users here"
+                title="Type in a name">
+        </div>
+        <table id="table">
+            <thead class="thead">
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone No</th>
+                <th>DoB</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <script>
+        const tbody = document.getElementById("tbody");
+
+        const users = [
+            { name: "Riya", address: "Bhaktapur", phoneNo: 98236007, dob: "27/03/2002", age: 21, gender: "Female" },
+            { name: "Pritha", address: "Baneshwor", phoneNo: 98239967, dob: "01/01/2000", age: 22, gender: "Female" },
+            { name: "Sanil", address: "Bhaktapur", phoneNo: 98002367, dob: "04/07/2002", age: 21, gender: "Male" }
+        ];
+
+        function addRow() {
+            tbody.innerHTML = ""; // Clear the table body
+
+            users.forEach((data) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${data.name}</td>
+                    <td>${data.address}</td>
+                    <td>${data.phoneNo}</td>
+                    <td>${data.dob}</td>
+                    <td>${data.age}</td>
+                    <td>${data.gender}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function filterTable() {
+            const searchName = document.querySelector(".searchName");
+            const keyword = searchName.value.toUpperCase();
+            const rows = tbody.getElementsByTagName("tr");
+
+            for (const row of rows) {
+                const nameCol = row.getElementsByTagName("td")[0];
+                if (nameCol) {
+                    const nameValue = nameCol.textContent || nameCol.innerText;
+                    const nameMatch = nameValue.toUpperCase().includes(keyword);
+                    row.style.display = nameMatch ? "" : "none";
+                }
+            }
+        }
+
+        addRow();
+    </script>
+
+</body>
+
+</html>

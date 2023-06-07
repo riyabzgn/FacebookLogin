@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .tb {
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+        }
+
+        #output {
+            border: 2px solid #18363E;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #18363E;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .ip {
+            border: 2px solid #18363E;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .input1,
+        .input2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .input1 label,
+        .input2 label {
+            margin-right: 5px;
+        }
+
+        .input1 input,
+        .input2 input {
+            width: 100%;
+        }
+
+        .button {
+            border: none;
+            width: 100px;
+            height: 30px;
+            background-color: #18363E;
+            color: white;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #9296c2;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5%;
+        }
+
+        #heading1,
+        #heading2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .tb {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+            #output {
+                margin-top: 40px;
+            }
+
+            .ip {
+                margin: 40px;
+            }
+        }
+    </style>
+
+    <script>
+        function addRow() {
+            var name = document.getElementById("fname");
+            var address = document.getElementById("address");
+            var phoneNo = document.getElementById("phoneNo");
+            var dob = document.getElementById("dob");
+            var age = document.getElementById("age");
+            var gender = document.getElementById("gender");
+
+            var output = document.querySelector("#output tbody");
+            output.innerHTML += "<tr><td>" + name.value + "</td><td>" + address.value + "</td><td>" + phoneNo.value + "</td><td>" + dob.value + "</td><td>" + age.value + "</td><td>" + gender.value + "</td></tr>";
+            console.log(name.value);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="tb">
+        <h3 id="heading1">User Information:</h3>
+        <table id="output">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone No</th>
+                    <th>DoB</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+
+    <div class="ip">
+        <form action="">
+            <h4 id="heading2">Enter User details here:</h4>
+            <div class="input1">
+
+                <div class="fname">
+                    <label for="fname">Name </label>
+                    <input type="text" id="fname">
+                </div>
+                <div class="address">
+                    <label for="address">Address </label>
+                    <input type="text" id="address">
+                </div>
+                <div class="phoneNo">
+                    <label for="phoneNo">Phone No. </label>
+                    <input type="text" id="phoneNo">
+                </div>
+            </div>
+            <div class="input2">
+                <div class="dob">
+                    <label for="dob">Date Of Birth </label>
+                    <input type="date" id="dob">
+                </div>
+                <div class="age">
+                    <label for="age">Age </label>
+                    <input type="text" id="age">
+                </div>
+                <div class="gender">
+                    <label for="gender">Gender </label>
+                    <input type="text" id="gender">
+                </div>
+            </div>
+        </form>
+        <div class="btn">
+            <button class="button" onclick="addRow()">Add Row</button>
+        </div>
+        <br>
+    </div>
+
+</body>
+
+</html>

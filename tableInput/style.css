@@ -19,6 +19,16 @@
     text-align: center;
 }
 
+.text{
+    height:30px;
+    margin:10px;
+}
+
+input[type="text"]{
+    height: 100%;
+}
+
+
 .input1{
     display: flex;
     flex-wrap:wrap;
@@ -42,7 +52,7 @@
 
 .button{
     border: none;
-    width:100px;
+    width:150px;
     height:30px;
     background-color: #18363E;
     color: white;

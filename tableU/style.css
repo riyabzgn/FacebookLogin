@@ -1,0 +1,47 @@
+.content{
+    padding:50px;
+    width: 800px;
+    margin-left:280px;
+    margin-top:50px;
+    background-color:#DDC3A5;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #E0A96D;
+}
+
+.head1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+th{
+    border: 3px solid #201E20 ;
+    background-color: #201E20;
+    color: white;
+}
+
+.table, th, td{
+    width: 60%;
+    border: 5px;
+    padding:10px;
+
+}
+
+td{
+    background-color: #E0A96D;
+    color: white;
+}
+
+.thead{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.searchName{
+    /* margin-left:150px; */
+    margin-bottom:20px;
+    width:100%;
+    height: 30px;
+}
