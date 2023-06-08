@@ -2,7 +2,7 @@
 const tbody = document.getElementById("tbody");
 
 //array values for the table
-const users = [
+var users = [
     { name: "Riya Bazgain", address: "Bhaktapur", phoneNo: 98233765784, dob: "27/03/2002", age: 21, gender: "Female" },
     { name: "Pritha Shrestha", address: "Baneshwor", phoneNo: 9803684576, dob: "01/01/2000", age: 22, gender: "Female" },
     { name: "Sanil Manandhar", address: "Kirtipur", phoneNo: 9808723444, dob: "04/07/2001", age: 21, gender: "Male" },
@@ -41,23 +41,31 @@ function userInput() {
     console.log(name.value);
 }
 
-//This table helps filter the name list and search for the specified name
-function filterTable() {
-    const searchName = document.querySelector(".searchName");
-    const keyword = searchName.value.toUpperCase();
-    const rows = Array.from(tbody.getElementsByTagName("tr")); // Convert HTMLCollection to Array
+// //This table helps filter the name list and search for the specified name
+// function filterTable() {
+//     const searchName = document.querySelector(".searchName");
+//     const keyword = searchName.value.toUpperCase();
+//     const rows = Array.from(tbody.getElementsByTagName("tr")); // Convert HTMLCollection to Array
 
-    rows.filter((row) => {
-        const nameCol = row.getElementsByTagName("td")[0];
-        if (nameCol) {
-            const nameValue = nameCol.textContent || nameCol.innerText;
-            const nameMatch = nameValue.toUpperCase().includes(keyword);
-            row.style.display = nameMatch ? "" : "none";
-            return nameMatch; // Include row in filtered array if the name matches
-        }
-        return false; // Exclude row if there is no name column
-    });
+//     rows.filter((row) => {
+//         const nameCol = row.getElementsByTagName("td")[0];
+//         if (nameCol) {
+//             const nameValue = nameCol.textContent || nameCol.innerText;
+//             const nameMatch = nameValue.toUpperCase().includes(keyword);
+//             row.style.display = nameMatch ? "" : "none";
+//             return nameMatch; // Include row in filtered array if the name matches
+//         }
+//         return false; // Exclude row if there is no name column
+//     });
+// }
+
+function filterT() {
+    const searchName = document.querySelector(".searchName");
+    // let usersDup = users
+
+    users = users.filter((user) => user.name.toLowerCase().includes(searchName.value.toLowerCase()));
+    addRow();
+
+    console.log(users);
 }
 
-
-addRow();
