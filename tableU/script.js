@@ -69,3 +69,5 @@ function filterT() {
     console.log(users);
 }
 
+addRow();
+
