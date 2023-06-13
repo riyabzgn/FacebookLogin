@@ -52,19 +52,31 @@ function addRow() {
 
 function userInput() {
 
-    let form = document.getElementsByName("formData");
+    let form = document.getElementById("formData");
     let formData = new FormData(form);
+    const inputData = {}
+    //for(key[key,value] )
+    for (let [key, value] of formData) {
+        console.log(key, value);
+        inputData[key] = value;
+    } 
+    users.push(inputData);
+    addRow();
 
-    for(let [key, value] of formData.entries()){
-        console.log('key', key, 'value', value);
-    }
-    // var newRow = {};
+
+    //'key', key, 'value', value
+
+
+    // var newRow = {}; 
+
+
+
 
     // formData.forEach(function (item) {
     //     newRow[item.id] = item.value;
     // });
-
     // users.push(newRow);
+
     // addRow();
 }
 
