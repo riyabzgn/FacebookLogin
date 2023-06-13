@@ -27,6 +27,7 @@
                 <th>DoB</th>
                 <th>Age</th>
                 <th>Gender</th>
+                <th>Remark</th>
             </thead>
             <tbody id="tbody"></tbody>
         </table>
@@ -37,41 +38,43 @@
     </div>
 
     <div class="ip">
-        <form action="">
+        <form action="" name ="formData">
             <h4 id="heading2">Enter User details here:</h4>
             <div class="input1">
                 <div class="text">
                     <!-- <label> Name </label> -->
-                    <input type="text" id="fname" class="formItem" placeholder="Enter Name">
+                    <input type="text" id="fname" name="name" class="formItem" placeholder="Enter Name">
                 </div>
                 <div class="text">
                     <!-- <label> Address </label> -->
-                    <input type="text" id="address" class="formItem" placeholder="Enter Address">
+                    <input type="text" id="address" name="address" class="formItem" placeholder="Enter Address">
                 </div>
                 <div class="text">
                     <!-- <label> Phone No. </label> -->
-                    <input type="text" id="phoneNo" class="formItem" placeholder="Enter Phone No."></input>
+                    <input type="text" id="phoneNo" name="phoneNo" class="formItem" placeholder="Enter Phone No."></input>
                 </div>
             </div>
             <div class="input2">
                 <div class="text">
                     <!-- <label> Date Of Birth </label> -->
-                    <input type="date" id="dob" class="formItem" placeholder="Enter DoB"></input>
+                    <input type="date" id="dob" name="dob" class="formItem" placeholder="Enter DoB"></input>
                 </div>
                 <div class="text">
                     <!-- <label> Age </label> -->
-                    <input type="text" id="age" class="formItem" placeholder="Enter Age"></input>
+                    <input type="text" id="age" name="age" class="formItem" placeholder="Enter Age"></input>
                 </div>
                 <div class="text">
                     <!-- <label> Gender </label> -->
-                    <input type="text" id="gender" class="formItem" placeholder="Enter Gender"></input>
+                    <input type="text" id="gender" name="gender" class="formItem" placeholder="Enter Gender"></input>
                 </div>
-
+                <!-- <div>
+                    <input type="button" id="deleteButton" placeholder="Delete">
+                </div> -->
             </div>
         </form>
         <br>
         <div class="btn">
-            <button class="button" onclick="userInput();">Add Row</button>
+            <button class="button1" onclick="userInput()">Add Row</button>
         </div>
     </div>
     <script src="../tableU/script.js"></script>

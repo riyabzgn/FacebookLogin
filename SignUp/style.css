@@ -1,13 +1,22 @@
 .card {
   font-size: 20px;
   margin: 100px;
-  background-color: white;
+  background-color: #DDC3A5;
   padding: 30px;
   width: 600px;
   height: 850px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   margin-left: 400px;
+}
+
+.cardHead{
+  display: flex;
+  justify-content: center;
+}
+
+.submitDiv{
+
 }
 
 label {
@@ -75,7 +84,7 @@ select {
   margin: 8px;
   text-align: center;
   height: 30px;
-  background-color: rgb(54, 81, 148);
+  background-color: #201E20;
   width: 50%;
   height: 40px;
   color: white;
@@ -83,7 +92,7 @@ select {
 }
 
 #submitBtn:hover {
-  background-color: rgb(46, 80, 144);
+  background-color: #201e209f;
 }
 
 input[type="checkbox"] {
