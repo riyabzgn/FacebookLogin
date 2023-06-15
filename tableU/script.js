@@ -23,61 +23,55 @@ function addRow() {
             <td>${data.dob}</td>
             <td>${data.age}</td>
             <td>${data.gender}</td>
-            <td> <button id="deleteBtn" onclick="deleteRow(${users.indexOf(data)})">Delete</button>
-</td>
+            <td> <button id="deleteBtn" onclick="deleteRow(${users.indexOf(data)})">Delete</button></td>
+            <td><button id="editBtn" onclick="editRow(${users.indexOf(data)})">Edit</button></td>
         `;
         tbody.appendChild(row);
     });
+
+
+}
+let editUserIndex = -1;
+
+// Rest of the code...
+
+function editRow(index) {
+    let user = users[index];
+    let form = document.getElementById("formData");
+    console.log('index', index);
+
+    editUserIndex = index;
+
+    form.name.value = user.name;
+    form.address.value = user.address;
+    form.phoneNo.value = user.phoneNo;
+    form.dob.value = user.dob;
+    form.age.value = user.age;
+    form.gender.value = user.gender;
 }
 
-// //this function takes user input and reflects it on the table
-// function userInput() {
-//     var name = document.getElementById("fname");
-//     var address = document.getElementById("address");
-//     var phoneNo = document.getElementById("phoneNo");
-//     var dob = document.getElementById("dob");
-//     var age = document.getElementById("age");
-//     var gender = document.getElementById("gender");
-//     // var deleteR= document.getElementById("deleteButton");
-
-//     var output = document.querySelector("#tbody");
-//     output.innerHTML += "<tr><td>" + name.value + "</td><td>" + address.value + "</td><td>" + phoneNo.value + "</td><td>" + dob.value + "</td><td>" + age.value + "</td><td>" + gender.value + "</td></tr>";
-//     console.log(name.value);
-
-//     let formData = document.getElementsByName("formData");
-//     formData.forEach(item => {
-//         console.log("item", item.value);
-//     })
-// }
-
 function userInput() {
-
     let form = document.getElementById("formData");
     let formData = new FormData(form);
+
     const inputData = {}
-    //for(key[key,value] )
+
     for (let [key, value] of formData) {
         console.log(key, value);
         inputData[key] = value;
-    } 
-    users.push(inputData);
+    }
+
+    let newUser = inputData;
+
+    if (editUserIndex !== -1) {
+        users[editUserIndex] = newUser;
+    } else {
+        users.push(newUser);
+    }
+
     addRow();
 
-
-    //'key', key, 'value', value
-
-
-    // var newRow = {}; 
-
-
-
-
-    // formData.forEach(function (item) {
-    //     newRow[item.id] = item.value;
-    // });
-    // users.push(newRow);
-
-    // addRow();
+    form.reset();
 }
 
 function deleteRow(index) {
