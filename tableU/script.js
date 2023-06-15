@@ -31,16 +31,14 @@ function addRow() {
 
 
 }
-let editUserIndex = -1;
-
-// Rest of the code...
+let indexEdit = -1;
 
 function editRow(index) {
     let user = users[index];
     let form = document.getElementById("formData");
     console.log('index', index);
 
-    editUserIndex = index;
+    indexEdit = index;
 
     form.name.value = user.name;
     form.address.value = user.address;
@@ -63,8 +61,8 @@ function userInput() {
 
     let newUser = inputData;
 
-    if (editUserIndex !== -1) {
-        users[editUserIndex] = newUser;
+    if (indexEdit !== -1) {
+        users[indexEdit] = newUser;
     } else {
         users.push(newUser);
     }
